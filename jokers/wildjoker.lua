@@ -1,5 +1,5 @@
 
-SMODS.Joker{ --Wild Joker
+SMODS.Joker{
     key = "wildjoker",
     config = {
         extra = {
@@ -7,14 +7,14 @@ SMODS.Joker{ --Wild Joker
         }
     },
     loc_txt = {
-        ['name'] = 'Wild Joker',
-        ['text'] = {
-            [1] = 'Retrigger all played',
-            [2] = '{V:1}#1#{} cards',
-            [3] = '{s:0.8,C:default}suit change at end of round{}'
+        name = 'Wild Joker',
+        text = {
+            'Retrigger all played',
+            '{V:1}#1#{} cards',
+            '{s:0.8,C:default}suit change at end of round{}'
         },
-        ['unlock'] = {
-            [1] = 'Unlocked by default.'
+        unlock = {
+            'Unlocked by default.'
         }
     },
     pos = {
@@ -36,8 +36,14 @@ SMODS.Joker{ --Wild Joker
     pools = { ["vl_vl_jokers"] = true },
     
     loc_vars = function(self, info_queue, card)
-        
-        return {vars = {localize((G.GAME.current_round.suit_card or {}).suit or 'Spades', 'suits_singular')}, colours = {G.C.SUITS[(G.GAME.current_round.suit_card or {}).suit or 'Spades']}}
+        return {
+            vars = {
+                localize((G.GAME.current_round.suit_card or {}).suit or 'Spades', 'suits_singular'),
+                colours = {
+                    G.C.SUITS[(G.GAME.current_round.suit_card or {}).suit or 'Spades']
+                }
+            }
+        }
     end,
     
     set_ability = function(self, card, initial)

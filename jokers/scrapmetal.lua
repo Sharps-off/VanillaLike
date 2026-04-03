@@ -18,7 +18,7 @@ SMODS.Joker{ --Scrap Metal
         }
     },
     pos = {
-        x = 2,
+        x = 1,
         y = 0
     },
     display_size = {

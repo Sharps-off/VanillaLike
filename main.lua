@@ -25,6 +25,14 @@ SMODS.Atlas({
 })
 
 SMODS.Atlas({
+    key = "CustomDecks", 
+    path = "CustomDecks.png", 
+    px = 71,
+    py = 95, 
+    atlas_table = "ASSET_ATLAS"
+})
+
+SMODS.Atlas({
     key = "CustomConsumables", 
     path = "CustomConsumables.png", 
     px = 71,
@@ -52,13 +60,19 @@ local NFS = require("nativefs")
 to_big = to_big or function(a) return a end
 lenient_bignum = lenient_bignum or function(a) return a end
 
-local jokerIndexList = {7,5,1,4,9,10,8,6,2,3,2,2,2,2}
-
 local function load_jokers_folder()
     local mod_path = SMODS.current_mod.path
     local jokers_path = mod_path .. "/jokers"
     local files = NFS.getDirectoryItemsInfo(jokers_path)
-    for i = 1, #jokerIndexList do
+    local count = 0
+
+    for _, file in ipairs(files) do
+        if file.name and file.name:sub(-4) == ".lua" then
+            count = count + 1
+        end
+    end
+
+    for i = 1, count do
         local file_name = files[i].name
         if file_name:sub(-4) == ".lua" then
             assert(SMODS.load_file("jokers/" .. file_name))()
@@ -66,6 +80,25 @@ local function load_jokers_folder()
     end
 end
 
+local function load_decks_folder()
+    local mod_path = SMODS.current_mod.path
+    local decks_path = mod_path .. "/decks"
+    local files = NFS.getDirectoryItemsInfo(decks_path)
+    local count = 0
+
+    for _, file in ipairs(files) do
+        if file.name and file.name:sub(-4) == ".lua" then
+            count = count + 1
+        end
+    end
+
+    for i = 1, count do
+        local file_name = files[i].name
+        if file_name:sub(-4) == ".lua" then
+            assert(SMODS.load_file("decks/" .. file_name))()
+        end
+    end
+end
 
 local consumableIndexList = {1}
 
@@ -123,6 +156,7 @@ local function load_seals_folder()
 end
 
 load_jokers_folder()
+load_decks_folder()
 load_consumables_folder()
 load_enhancements_folder()
 load_seals_folder()
