@@ -17,8 +17,8 @@ SMODS.Back {
     loc_txt = {
         name = 'Legendary Deck',
         text = {
-            [1] = '{C:dark_edition,E:1}Legendary{} {C:attention}Joker{} may appear',
-            [2] = 'in the shop'
+            [1] = '{C:legendary,E:1}Legendary{} {C:attention}Joker{} can',
+            [2] = 'appear in the shop'
         },
     },
     unlocked = true,

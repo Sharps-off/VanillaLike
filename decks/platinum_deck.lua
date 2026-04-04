@@ -1,7 +1,7 @@
 
 SMODS.Back {
     key = 'platinum_deck',
-    pos = { x = 5, y = 0 },
+    pos = { x = 8, y = 0 },
     config = {
     },
     loc_txt = {
