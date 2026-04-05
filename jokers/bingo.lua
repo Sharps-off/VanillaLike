@@ -1,5 +1,5 @@
 
-SMODS.Joker{ --Bingo
+SMODS.Joker{
     key = "bingo",
     config = {
         extra = {
@@ -11,7 +11,7 @@ SMODS.Joker{ --Bingo
         ['text'] = {
             [1] = 'Played {C:attention}#2#{} cards give',
             [2] = '{C:red}+#1# Mult{} when scored',
-            [3] = '{s:0.9,C:default}rank change at end of round{}'
+            [3] = '{s:0.9,C:default}rank changes at end of round{}'
         },
         ['unlock'] = {
             [1] = 'Unlocked by default.'

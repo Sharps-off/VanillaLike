@@ -1,5 +1,5 @@
 
-SMODS.Joker{ --Mirrored Joker
+SMODS.Joker{
     key = "mirroredjoker",
     config = {
         extra = {
@@ -13,7 +13,7 @@ SMODS.Joker{ --Mirrored Joker
         ['text'] = {
             [1] = 'Copies ability of a',
             [2] = '{C:attention}random{} owned Joker',
-            [3] = '{s:0.7,C:default}Joker change when a blind is selected{}',
+            [3] = '{s:0.7,C:default}Joker changes when a blind is selected{}',
             [4] = '{C:inactive}(Currently : {}{C:attention}#1#{}{C:inactive}){}'
         },
         ['unlock'] = {
@@ -51,11 +51,9 @@ SMODS.Joker{ --Mirrored Joker
         local joker_name = "None" 
         
         if target_key and target_key ~= 0 then
-            -- Localisation du nom en utilisant la clé sauvegardée [9]
             joker_name = localize({type = 'name_text', set = 'Joker', key = target_key})
         end
         
-        -- #1# affichera le nom localisé du Joker copié.
         return {vars = {joker_name}} 
     end,
     
@@ -63,7 +61,6 @@ SMODS.Joker{ --Mirrored Joker
 
         if context.end_of_round and context.cardarea == G.jokers then
             
-            -- 1. Filtrer tous les jokers, excluant le Mirrored Joker lui-même
             local other_jokers = {}
             for _, joker in ipairs(G.jokers.cards) do
                 if joker ~= card then
@@ -74,16 +71,13 @@ SMODS.Joker{ --Mirrored Joker
             local selected_joker_key = nil
             
             if #other_jokers > 0 then
-                -- 2. Choisir un Joker aléatoire parmi les autres Jokers
                 local target_joker_object, _ = pseudorandom_element(other_jokers, pseudoseed('mirrored_target_seed' .. G.GAME.round_resets.ante))
                 
-                -- 3. Sauvegarder la clé du Joker cible pour la persistance (indépendant de la position)
                 if target_joker_object and target_joker_object.config and target_joker_object.config.center then
-                    selected_joker_key = target_joker_object.config.center.key -- Récupère la clé (e.g., 'j_joker') [5]
-                    card.ability.extra.text = selected_joker_key -- Mise à jour de la clé sauvegardée
+                    selected_joker_key = target_joker_object.config.center.key
+                    card.ability.extra.text = selected_joker_key
                 end
             else
-                -- Si aucun autre Joker n'est présent, on met la clé à nil/0
                 card.ability.extra.text = 0
             end
 

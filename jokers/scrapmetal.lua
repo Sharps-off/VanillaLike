@@ -1,5 +1,5 @@
 
-SMODS.Joker{ --Scrap Metal
+SMODS.Joker{
     key = "scrapmetal",
     config = {
         extra = {

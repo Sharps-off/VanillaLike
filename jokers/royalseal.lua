@@ -1,5 +1,5 @@
 
-SMODS.Joker{ --Royal Seal
+SMODS.Joker{
     key = "royalseal",
     config = {
         extra = {

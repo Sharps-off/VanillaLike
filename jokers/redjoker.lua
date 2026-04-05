@@ -1,5 +1,5 @@
 
-SMODS.Joker{ --Red Joker
+SMODS.Joker{
     key = "redjoker",
     config = {
         extra = {

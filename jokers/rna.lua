@@ -1,5 +1,5 @@
 
-SMODS.Joker{ --RNA
+SMODS.Joker{
     key = "rna",
     config = {
         extra = {
@@ -72,7 +72,7 @@ SMODS.Joker{ --RNA
 
             local target_card = context.other_card
 
-            local function juice_card_until_(card, eval_func, first, delay) -- balatro function doesn't allow for custom scale and rotation
+            local function juice_card_until_(card, eval_func, first, delay)
                 G.E_MANAGER:add_event(Event({
                     trigger = 'after', delay = delay or 0.1, blocking = false, blockable = false, timer = 'REAL',
                     func = (function() if eval_func(card) then if not first or first then card:juice_up(0.1, 0.1) end; juice_card_until_(card, eval_func, nil, 0.8) end return true end)

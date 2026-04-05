@@ -1,5 +1,5 @@
 
-SMODS.Joker{ --Purist
+SMODS.Joker{
     key = "purist",
     config = {
         extra = {

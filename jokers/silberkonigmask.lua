@@ -1,5 +1,5 @@
 
-SMODS.Joker{ --Silberkönig Mask
+SMODS.Joker{
     key = "silberkonigmask",
     config = {
         extra = {

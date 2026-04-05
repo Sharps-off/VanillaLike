@@ -1,5 +1,5 @@
 
-SMODS.Joker{ --Motley
+SMODS.Joker{
     key = "motley",
     config = {
         extra = {
@@ -20,11 +20,15 @@ SMODS.Joker{ --Motley
     },
     pos = {
         x = 1,
-        y = 0
+        y = 1
     },
     display_size = {
         w = 71 * 1, 
         h = 95 * 1
+    },
+    soul_pos = {
+        x = 0,
+        y = 1
     },
     cost = 20,
     rarity = 4,

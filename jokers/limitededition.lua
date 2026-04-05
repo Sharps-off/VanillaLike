@@ -1,5 +1,5 @@
 
-SMODS.Joker{ --Limited Edition
+SMODS.Joker{
     key = "limitededition",
     config = {
         extra = {

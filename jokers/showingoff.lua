@@ -1,5 +1,5 @@
 
-SMODS.Joker{ --Showing Off
+SMODS.Joker{
     key = "showingoff",
     config = {
         extra = {

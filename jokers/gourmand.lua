@@ -1,5 +1,5 @@
 
-SMODS.Joker{ --Gourmand
+SMODS.Joker{
     key = "gourmand",
     config = {
         extra = {
