@@ -26,7 +26,7 @@ SMODS.Joker{
     },
     cost = 8,
     rarity = 3,
-    blueprint_compat = true,
+    blueprint_compat = false,
     eternal_compat = true,
     perishable_compat = true,
     unlocked = true,

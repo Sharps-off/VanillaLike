@@ -1,13 +1,13 @@
 
 SMODS.Joker{
-    key = "wildjoker",
+    key = "wildroulette",
     config = {
         extra = {
             repetitions0 = 1
         }
     },
     loc_txt = {
-        name = 'Wild Joker',
+        name = 'Wild Roulette',
         text = {
             'Retrigger all played',
             '{V:1}#1#{} cards',
@@ -17,7 +17,7 @@ SMODS.Joker{
             'Unlocked by default.'
         }
     },
-    pos = {
+    pos = { 
         x = 5,
         y = 0
     },

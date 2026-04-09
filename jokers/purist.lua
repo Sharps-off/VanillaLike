@@ -7,14 +7,11 @@ SMODS.Joker{
         }
     },
     loc_txt = {
-        ['name'] = 'Purist',
-        ['text'] = {
-            [1] = 'Non {C:enhanced}Enhanced{} cards',
-            [2] = 'give {X:red,C:white}x1.5{} Mult when',
-            [3] = 'scored'
-        },
-        ['unlock'] = {
-            [1] = 'Unlocked by default.'
+        name = 'Purist',
+        text = {
+            'Non {C:enhanced}Enhanced{} cards',
+            'give {X:red,C:white}x1.5{} Mult when',
+            'scored'
         }
     },
     pos = {

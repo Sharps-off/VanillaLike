@@ -7,14 +7,11 @@ SMODS.Joker{
         }
     },
     loc_txt = {
-        ['name'] = 'Scrap Metal',
-        ['text'] = {
-            [1] = 'Earn {C:money}$2{} for every',
-            [2] = '{C:attention}5{} cards discarded',
-            [3] = 'at the same time'
-        },
-        ['unlock'] = {
-            [1] = 'Unlocked by default.'
+        name = 'Scrap Metal',
+        text = {
+            'Earn {C:money}$2{} if {C:attention}5{}',
+            'cards are discarded',
+            'at the same time'
         }
     },
     pos = {
@@ -46,7 +43,7 @@ SMODS.Joker{
                         local target_dollars = G.GAME.dollars + 2
                         local dollar_value = target_dollars - current_dollars
                         ease_dollars(dollar_value)
-                        card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "+"..tostring(2), colour = G.C.MONEY})
+                        card_eval_status_text(context.blueprint_card or card, 'extra', nil, nil, nil, {message = "$2", colour = G.C.MONEY})
                         return true
                     end
                 }

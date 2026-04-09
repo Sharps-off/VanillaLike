@@ -3,19 +3,15 @@ SMODS.Joker{
     key = "motley",
     config = {
         extra = {
-            odds = 4,
-            hand = 0
+            odds = 4
         }
     },
     loc_txt = {
-        ['name'] = 'Motley',
-        ['text'] = {
-            [1] = 'Has {C:green}#1# in #2#{} chance',
-            [2] = 'to add a {C:attention}random {}{C:dark_edition}Negative{}',
-            [3] = 'card in your deck'
-        },
-        ['unlock'] = {
-            [1] = 'Unlocked by default.'
+        name = 'Motley',
+        text = {
+            'When Blind is selected, {C:green}#1# in #2#{}',
+            'chance to add a random {C:dark_edition}Negative{}',
+            '{C:attention}playing card{} to your hand'
         }
     },
     pos = {

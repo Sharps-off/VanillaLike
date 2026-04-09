@@ -1,19 +1,16 @@
 
 SMODS.Joker {
-    key = "judge",
+    key = "judgejoker",
     config = {
         extra = {
         }
     },
     loc_txt = {
-        ['name'] = 'Judge',
-        ['text'] = {
-            [1] = 'Creates a {C:attention}Joker{} when',
-            [2] = '{C:attention}Blind{} is selected',
-            [3] = '{C:inactive}(Must have room){}'
-        },
-        ['unlock'] = {
-            [1] = 'Unlocked by default.'
+        name = 'Judge Joker',
+        text = {
+            'Creates a {C:attention}Joker{} when',
+            '{C:attention}Blind{} is selected',
+            '{C:inactive}(Must have room){}'
         }
     },
     pos = {
