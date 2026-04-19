@@ -7,12 +7,9 @@ SMODS.Joker{
         }
     },
     loc_txt = {
-        ['name'] = 'Gourmand',
-        ['text'] = {
-            [1] = '{C:blue}+1{} hand each round'
-        },
-        ['unlock'] = {
-            [1] = ''
+        name = 'Gourmand',
+        text = {
+            '{C:blue}+1{} hand each round'
         }
     },
     pos = {

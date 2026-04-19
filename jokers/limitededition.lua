@@ -7,14 +7,11 @@ SMODS.Joker{
         }
     },
     loc_txt = {
-        ['name'] = 'Limited Edition',
-        ['text'] = {
-            [1] = 'When a card is scored,',
-            [2] = '{C:green}#1# in #2#{} chance to add {C:dark_edition}Foil{},',
-            [3] = '{C:dark_edition}Holographic{}, or {C:dark_edition}Polychrome{} {C:default}edition{}'
-        },
-        ['unlock'] = {
-            [1] = 'Unlocked by default.'
+        name = 'Limited Edition',
+        text = {
+            'When a card is scored,',
+            '{C:green}#1# in #2#{} chance to add {C:dark_edition}Foil{},',
+            '{C:dark_edition}Holographic{}, or {C:dark_edition}Polychrome{} {C:default}edition{}'
         }
     },
     pos = {

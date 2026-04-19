@@ -7,14 +7,11 @@ SMODS.Joker{
         }
     },
     loc_txt = {
-        ['name'] = 'Red Joker',
-        ['text'] = {
-            [1] = '{C:white,X:red}+0.03X{} Mult for each',
-            [2] = 'remaining card in {C:attention}deck{}',
-            [3] = '{C:inactive}(Currently {}{C:white,X:red}+#1#X{} {C:inactive}Mult){}'
-        },
-        ['unlock'] = {
-            [1] = ''
+        name = 'Red Joker',
+        text = {
+            '{C:white,X:red}+0.03X{} Mult for each',
+            'remaining card in {C:attention}deck{}',
+            '{C:inactive}(Currently {}{C:white,X:red}+#1#X{} {C:inactive}Mult){}'
         }
     },
     pos = {

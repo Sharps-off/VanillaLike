@@ -7,15 +7,12 @@ SMODS.Joker{
         }
     },
     loc_txt = {
-        ['name'] = 'RNA',
-        ['text'] = {
-            [1] = 'If {C:attention}first hand{} of round',
-            [2] = 'has only {C:attention}1{} card, add a',
-            [3] = '{C:attention}random{} {C:dark_edition}Polychrome{} card',
-            [4] = 'in your hand'
-        },
-        ['unlock'] = {
-            [1] = 'Unlocked by default.'
+        name = 'RNA',
+        text = {
+            'If {C:attention}first hand{} of round',
+            'has only {C:attention}1{} card, add a',
+            '{C:attention}random{} {C:dark_edition}Polychrome{} card',
+            'in your hand'
         }
     },
     pos = {

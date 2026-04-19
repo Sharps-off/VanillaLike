@@ -62,95 +62,77 @@ lenient_bignum = lenient_bignum or function(a) return a end
 
 local function load_jokers_folder()
     local mod_path = SMODS.current_mod.path
-    local jokers_path = mod_path .. "/jokers"
-    local files = NFS.getDirectoryItemsInfo(jokers_path)
-    local count = 0
+    local jokers_path = mod_path .. "jokers"
+    local files = SMODS.NFS.getDirectoryItemsInfo(jokers_path)
 
-    for _, file in ipairs(files) do
-        if file.name and file.name:sub(-4) == ".lua" then
-            count = count + 1
-        end
-    end
-
-    for i = 1, count do
-        local file_name = files[i].name
-        if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("jokers/" .. file_name))()
+    if files then
+        for _, file in ipairs(files) do
+            if file.name and file.name:sub(-4) == ".lua" then
+                assert(SMODS.load_file("jokers/" .. file.name))()
+            end
         end
     end
 end
 
 local function load_decks_folder()
     local mod_path = SMODS.current_mod.path
-    local decks_path = mod_path .. "/decks"
-    local files = NFS.getDirectoryItemsInfo(decks_path)
-    local count = 0
+    local decks_path = mod_path .. "decks"
+    local files = SMODS.NFS.getDirectoryItemsInfo(decks_path)
 
-    for _, file in ipairs(files) do
-        if file.name and file.name:sub(-4) == ".lua" then
-            count = count + 1
-        end
-    end
-
-    for i = 1, count do
-        local file_name = files[i].name
-        if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("decks/" .. file_name))()
+    if files then
+        for _, file in ipairs(files) do
+            if file.name and file.name:sub(-4) == ".lua" then
+                assert(SMODS.load_file("decks/" .. file.name))()
+            end
         end
     end
 end
-
-local consumableIndexList = {1}
 
 local function load_consumables_folder()
     local mod_path = SMODS.current_mod.path
-    local consumables_path = mod_path .. "/consumables"
-    local files = NFS.getDirectoryItemsInfo(consumables_path)
-    local set_file_number = #files + 1
-    for i = 1, #files do
-        if files[i].name == "sets.lua" then
-            assert(SMODS.load_file("consumables/sets.lua"))()
-            set_file_number = i
-        end
-    end    
-    for i = 1, #consumableIndexList do
-        local j = consumableIndexList[i]
-        if j >= set_file_number then 
-            j = j + 1
-        end
-        local file_name = files[j].name
-        if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("consumables/" .. file_name))()
+    local consumables_path = mod_path .. "consumables"
+    local files = SMODS.NFS.getDirectoryItemsInfo(consumables_path)
+
+    if files then
+        for _, file in ipairs(files) do
+            if file.name == "sets.lua" then
+                assert(SMODS.load_file("consumables/sets.lua"))()
+                break
+            end
+        end    
+        
+        for _, file in ipairs(files) do
+            if file.name and file.name:sub(-4) == ".lua" and file.name ~= "sets.lua" then
+                assert(SMODS.load_file("consumables/" .. file.name))()
+            end
         end
     end
 end
-
-
-local enhancementIndexList = {1}
 
 local function load_enhancements_folder()
     local mod_path = SMODS.current_mod.path
-    local enhancements_path = mod_path .. "/enhancements"
-    local files = NFS.getDirectoryItemsInfo(enhancements_path)
-    for i = 1, #enhancementIndexList do
-        local file_name = files[enhancementIndexList[i]].name
-        if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("enhancements/" .. file_name))()
+    local enhancements_path = mod_path .. "enhancements"
+    local files = SMODS.NFS.getDirectoryItemsInfo(enhancements_path)
+
+    if files then
+        for _, file in ipairs(files) do
+            if file.name and file.name:sub(-4) == ".lua" then
+                assert(SMODS.load_file("enhancements/" .. file.name))()
+            end
         end
     end
 end
 
-
-local sealIndexList = {1}
-
 local function load_seals_folder()
     local mod_path = SMODS.current_mod.path
-    local seals_path = mod_path .. "/seals"
-    local files = NFS.getDirectoryItemsInfo(seals_path)
-    for i = 1, #sealIndexList do
-        local file_name = files[sealIndexList[i]].name
-        if file_name:sub(-4) == ".lua" then
-            assert(SMODS.load_file("seals/" .. file_name))()
+    local seals_path = mod_path .. "seals"
+    local files = SMODS.NFS.getDirectoryItemsInfo(seals_path)
+
+    if files then
+        for _, file in ipairs(files) do
+            if file.name and file.name:sub(-4) == ".lua" then
+                assert(SMODS.load_file("seals/" .. file.name))()
+            end
         end
     end
 end

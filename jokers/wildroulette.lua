@@ -12,9 +12,6 @@ SMODS.Joker{
             'Retrigger all played',
             '{V:1}#1#{} cards',
             '{s:0.8,C:default}suit change at end of round{}'
-        },
-        unlock = {
-            'Unlocked by default.'
         }
     },
     pos = { 

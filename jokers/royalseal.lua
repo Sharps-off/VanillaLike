@@ -7,13 +7,10 @@ SMODS.Joker{
         }
     },
     loc_txt = {
-        ['name'] = 'Royal Seal',
-        ['text'] = {
-            [1] = 'Retrigger all scoring',
-            [2] = 'cards with a {C:attention}Seal{}'
-        },
-        ['unlock'] = {
-            [1] = 'Unlocked by default.'
+        name = 'Royal Seal',
+        text = {
+            'Retrigger all scoring',
+            'cards with a {C:attention}Seal{}'
         }
     },
     pos = {

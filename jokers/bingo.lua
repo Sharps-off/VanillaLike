@@ -7,14 +7,11 @@ SMODS.Joker{
         }
     },
     loc_txt = {
-        ['name'] = 'Bingo',
-        ['text'] = {
-            [1] = 'Played {C:attention}#2#{} cards give',
-            [2] = '{C:red}+#1# Mult{} when scored',
-            [3] = '{s:0.9,C:default}rank changes at end of round{}'
-        },
-        ['unlock'] = {
-            [1] = 'Unlocked by default.'
+        name = 'Bingo',
+        text = {
+            'Played {C:attention}#2#{} cards give',
+            '{C:red}+#1# Mult{} when scored',
+            '{s:0.9,C:default}rank changes at end of round{}'
         }
     },
     pos = {

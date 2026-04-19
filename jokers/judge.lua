@@ -2,8 +2,7 @@
 SMODS.Joker {
     key = "judgejoker",
     config = {
-        extra = {
-        }
+        extra = {}
     },
     loc_txt = {
         name = 'Judge Joker',

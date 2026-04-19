@@ -6,14 +6,11 @@ SMODS.Joker{
         }
     },
     loc_txt = {
-        ['name'] = 'Silberkönig Mask',
-        ['text'] = {
-            [1] = 'All played {C:attention}face {}cards',
-            [2] = 'become {C:attention}Steel{} cards',
-            [3] = 'when scored'
-        },
-        ['unlock'] = {
-            [1] = 'Unlocked by default.'
+        name = 'Silberkönig Mask',
+        text = {
+            'All played {C:attention}face {}cards',
+            'become {C:attention}Steel{} cards',
+            'when scored'
         }
     },
     pos = {

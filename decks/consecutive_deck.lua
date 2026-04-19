@@ -7,8 +7,8 @@ SMODS.Back {
     loc_txt = {
         name = 'Consecutive Deck',
         text = {
-            [1] = '{C:attention}Vouchers{} are only replaced',
-            [2] = 'the round after you buy one'
+            '{C:attention}Vouchers{} are only replaced',
+            'the round after you buy one'
         },
     },
     unlocked = true,

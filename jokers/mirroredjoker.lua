@@ -2,22 +2,15 @@
 SMODS.Joker{
     key = "mirroredjoker",
     config = {
-        extra = {
-            Pos = 1,
-            index = 0,
-            text = 0
-        }
+        extra = {}
     },
     loc_txt = {
-        ['name'] = 'Mirrored Joker',
-        ['text'] = {
-            [1] = 'Copies ability of a',
-            [2] = '{C:attention}random{} owned Joker',
-            [3] = '{s:0.7,C:default}Joker changes when a blind is selected{}',
-            [4] = '{C:inactive}(Currently : {}{C:attention}#1#{}{C:inactive}){}'
-        },
-        ['unlock'] = {
-            [1] = 'Unlocked by default.'
+        name = 'Mirrored Joker',
+        text = {
+            'Copies ability of a',
+            '{C:attention}random{} owned Joker',
+            '{s:0.7,C:default}Joker changes when a blind is selected{}',
+            '{C:inactive}(Currently : {}{C:attention}#1#{}{C:inactive}){}'
         }
     },
     pos = {

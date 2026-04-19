@@ -1,11 +1,7 @@
 
 SMODS.Joker{
     key = "purist",
-    config = {
-        extra = {
-            xchips0 = 1.5
-        }
-    },
+    config = { extra = { x_mult = 1.5 } },
     loc_txt = {
         name = 'Purist',
         text = {
@@ -22,7 +18,7 @@ SMODS.Joker{
         w = 71 * 1, 
         h = 95 * 1
     },
-    cost = 10,
+    cost = 8,
     rarity = 3,
     blueprint_compat = true,
     eternal_compat = true,
@@ -30,13 +26,22 @@ SMODS.Joker{
     unlocked = true,
     discovered = true,
     atlas = 'CustomJokers',
-    pools = { ["vanillal_vanillal_jokers"] = true },
     
     calculate = function(self, card, context)
         if context.individual and context.cardarea == G.play  then
-            return {
-                x_chips = 1.5
-            }
+            if (function()
+                local enhancements = SMODS.get_enhancements(context.other_card)
+                for k, v in pairs(enhancements) do
+                    if v then
+                        return false
+                    end
+                end
+                return true
+            end)() then
+                return {
+                    Xmult = 1.5
+                }
+            end
         end
     end
 }

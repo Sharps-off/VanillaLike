@@ -7,14 +7,11 @@ SMODS.Joker{
         }
     },
     loc_txt = {
-        ['name'] = 'Showing Off',
-        ['text'] = {
-            [1] = 'Retrigger all played',
-            [2] = 'cards if hand contains',
-            [3] = '{C:attention}5{} scoring {C:enhanced}Enhanced{} cards'
-        },
-        ['unlock'] = {
-            [1] = 'Unlocked by default.'
+        name = 'Showing Off',
+        text = {
+            'Retrigger all played',
+            'cards if hand contains',
+            '{C:attention}5{} scoring {C:enhanced}Enhanced{} cards'
         }
     },
     pos = {
